@@ -39,3 +39,7 @@ sudo jupyter labextension install jupyterlab-theme-solarized-dark
 # it is nice to have autocompletion etc in Jupyter notebooks
 sudo pip3 install 'python-language-server[all]' jupyter-lsp
 sudo jupyter labextension install @krassowski/jupyterlab-lsp
+
+# install plotly plotting library for jupyter lab use
+sudo pip3 install plotly
+sudo jupyter labextension install jupyterlab-plotly plotlywidget
