@@ -2,8 +2,8 @@
 
 This repository is mainly for documenting my personal experiments on Jetson platform.
 
-Current setup is Jetson Nano Developement Kit version B01 with Intel Dual Band Wireless-AC 3168 card
-and two IMX219 sensor cameras in in neat metal case from Waveshare.
+Current setup is Jetson Nano Developement Kit (4GB) version B01 with Intel Dual Band Wireless-AC 3168 card
+and two IMX219 sensor cameras in neat metal case from Waveshare.
 
 None of existing start points suited my purposed as I want to run experiments in headless environment ie. from Jupyter notebooks.
 JetPack version when writing these is 4.4.1.
@@ -70,5 +70,15 @@ sudo ldconfig
 Then start jupyterlab on terminal and browse to notebooks
 ```bash
 jupyter-lab --no-browser
+```
+
+## NVIDIA TensorRT
+
+NVIDIA provides higly optimized [TensorRT](https://developer.nvidia.com/tensorrt) runtime and SDK with the Jetson Nano SDK. They also provide handy [PyTorch to TensorRT converter](https://github.com/NVIDIA-AI-IOT/torch2trt) which is a must install:
+```bash
+git clone https://github.com/NVIDIA-AI-IOT/torch2trt
+cd torch2trt
+sudo python setup.py install --plugins
+
 ```
 

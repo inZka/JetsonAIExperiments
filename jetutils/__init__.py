@@ -3,6 +3,7 @@ import traitlets
 import threading
 import jetson.utils
 import numpy as np
+import time
 
 # these are for cameras mounted on waveshare case 
 # https://www.waveshare.com/wiki/Jetson_Nano_Case_(C)
@@ -85,3 +86,16 @@ class GstCamera(traitlets.HasTraits):
             # transition from running -> not running
             self._running = False
             self.thread.join()
+
+class SimpleTimer:
+    """ Simple timer as context manager """
+    def __init__(self):
+        self.time = 0
+        self.fps = 0
+        
+    def __enter__(self):
+        self.tic = time.monotonic()
+    
+    def __exit__(self, *info):
+        self.time = time.monotonic() - self.tic
+        self.fps = 1.0 / self.time
