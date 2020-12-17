@@ -20,25 +20,25 @@ jupyter lab --generate-config
 sudo pip3 install git+https://github.com/ipython/traitlets@master
 
 # install lab extensions
-sudo jupyter nbextension install --py widgetsnbextension --sys-prefix
-sudo jupyter labextension install @jupyter-widgets/jupyterlab-manager
-sudo jupyter labextension install @jupyterlab/statusbar
-sudo jupyter labextension enable @jupyterlab/statusbar
-sudo jupyter labextension install @jupyter-widgets/jupyterlab-sidecar
-sudo jupyter labextension install jupyterlab_tensorboard
 sudo pip3 install jupyter-tensorboard
-sudo jupyter labextension install @lckr/jupyterlab_variableinspector
-sudo jupyter labextension enable jupyterlab_variableinspector
-sudo jupyter labextension install jupyterlab-topbar-extension jupyterlab-system-monitor
-sudo jupyter labextension enable jupyter-topbar-extension
-sudo jupyter labextension enable jupyter-system-monitor
-sudo jupyter labextension install jupyterlab-theme-solarized-dark
+sudo pip3 install nbresuse==0.3.6
+sudo jupyter nbextension install --py widgetsnbextension --sys-prefix
+sudo jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
+sudo jupyter labextension install @jupyterlab/statusbar --no-build
+sudo jupyter labextension install @jupyter-widgets/jupyterlab-sidecar --no-build
+sudo jupyter labextension install jupyterlab_tensorboard --no-build
+sudo jupyter labextension install @lckr/jupyterlab_variableinspector --no-build
+sudo jupyter labextension install jupyterlab-topbar-extension jupyterlab-system-monitor --no-build
+sudo jupyter labextension install jupyterlab-theme-solarized-dark --no-build
+sudo jupyter labextension install @axlair/jupyterlab_vim --no-build
 
+# this one does not support Jetson 
 ## sudo jupyter labextension install jupyterlab-nvdashboard
 
 # it is nice to have autocompletion etc in Jupyter notebooks
 sudo pip3 install 'python-language-server[all]' jupyter-lsp
-sudo jupyter labextension install @krassowski/jupyterlab-lsp
+sudo jupyter labextension install @krassowski/jupyterlab-lsp --no-build
+sudo jupyter build
 
 # install plotly plotting library for jupyter lab use
 sudo pip3 install plotly
