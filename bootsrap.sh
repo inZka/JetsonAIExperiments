@@ -19,7 +19,7 @@ sudo ln -s /usr/include/locale.h /usr/include/xlocale.h
 sudo pip3 install -U pip
 sudo pip3 install -U -r base_requirements.txt
 # install Jetson GPU optimized Tensorflow
-sudo pip3 install --pre --no-cache-dir --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow==1.15.4
+sudo pip3 install --pre --no-cache-dir --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
 # install pytorch
 wget https://nvidia.box.com/shared/static/veo87trfaawj5pfwuqvhl6mzc5b55fbj.whl -O torch-1.1.0a0+b457266-cp36-cp36m-linux_aarch64.whl
 sudo pip3 install -y torch-1.1.0a0+b457266-cp36-cp36m-linux_aarch64.whl

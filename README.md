@@ -101,12 +101,22 @@ Then start jupyterlab on terminal and browse to notebooks
 jupyter-lab --no-browser
 ```
 
-## NVIDIA TensorRT
+## TensorFlow models and NVIDIA TensorRT
 
-NVIDIA provides higly optimized [TensorRT](https://developer.nvidia.com/tensorrt) runtime and SDK with the Jetson Nano SDK. They also provide handy [PyTorch to TensorRT converter](https://github.com/NVIDIA-AI-IOT/torch2trt) which is a must install:
+[TensorFlow](https://www.tensorflow.org/) maintains nice gallery of [model implementations](https://github.com/tensorflow/models) for TensorFlow.
+
+NVIDIA provides higly optimized [TensorRT](https://developer.nvidia.com/tensorrt) runtime and SDK with the Jetson Nano SDK.
+
+TensorFLow models can be converted directly with included [trt_convert](https://docs.nvidia.com/deeplearning/frameworks/tf-trt-user-guide/index.html)
+
+
+They also provide handy [converter](https://github.com/NVIDIA-AI-IOT/torch2trt) to convert [PyTorch](https://pytorch.org/)
+models to TensorRT. Installation from GitHub:
 
 ```bash
 git clone https://github.com/NVIDIA-AI-IOT/torch2trt
 cd torch2trt
-sudo python setup.py install --plugins
+sudo python3 setup.py install --plugins
 ```
+
+Many pretrained models can be found from [PyTorchGub](https://pytorch.org/hub/)

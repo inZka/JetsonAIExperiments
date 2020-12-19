@@ -43,3 +43,5 @@ sudo jupyter build
 # install plotly plotting library for jupyter lab use
 sudo pip3 install plotly
 sudo jupyter labextension install jupyterlab-plotly plotlywidget
+
+sudo pip3 istall shap
