@@ -44,4 +44,5 @@ sudo jupyter build
 sudo pip3 install plotly
 sudo jupyter labextension install jupyterlab-plotly plotlywidget
 
-sudo pip3 istall shap
+# TODO: how to get shap working on Jetson Nano
+## sudo pip3 istall shap
